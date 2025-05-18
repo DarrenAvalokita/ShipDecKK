@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Gallery - ShipDecKK</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional Gallery Page Styles */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background-color: var(--light-gray);
+            border: none;
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+        
+        .gallery-detail {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .ship-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .ship-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .ship-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .ship-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .ship-card:hover .ship-image img {
+            transform: scale(1.05);
+        }
+        
+        .ship-info {
+            padding: 20px;
+        }
+        
+        .ship-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--navy);
+        }
+        
+        .ship-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .ship-description {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        
+        .ship-details {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+        }
+        
+        .ship-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .ship-detail i {
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .gallery-detail {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .gallery-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="ShipDecKK Logo">
+                <h1>ShipDecKK</h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/gallery-hero.jpg');">
+        <div class="hero-content">
+            <h2>Our Ship Collection</h2>
+            <p>Explore our diverse range of high-quality vessels available for purchase</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="container">
+        <div class="section-header">
+            <h2>Ship Gallery</h2>
+            <p>Browse through our extensive collection of ships tailored to meet your specific needs</p>
+        </div>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Ships</button>
+            <button class="filter-btn" data-filter="yacht">Luxury Yachts</button>
+            <button class="filter-btn" data-filter="cargo">Cargo Ships</button>
+            <button class="filter-btn" data-filter="liner">Luxury Liners</button>
+        </div>
+        
+        <div class="gallery-detail">
+            <!-- Yacht 1 -->
+            <div class="ship-card" data-category="yacht">
+                <div class="ship-image">
+                    <img src="assets/yacht-1.jpg" alt="Ocean Voyager 120">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Ocean Voyager 120</h3>
+                    <div class="ship-price">$3,500,000</div>
+                    <p class="ship-description">A sleek and modern yacht with 3 luxurious cabins, state-of-the-art navigation system, and expansive deck space perfect for entertaining.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>120 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-bed"></i>
+                            <span>3 Cabins</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>30 knots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Yacht 2 -->
+            <div class="ship-card" data-category="yacht">
+                <div class="ship-image">
+                    <img src="assets/yacht-2.jpg" alt="Coastal Explorer 85">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Coastal Explorer 85</h3>
+                    <div class="ship-price">$1,800,000</div>
+                    <p class="ship-description">A versatile yacht featuring a spacious salon, gourmet kitchen, and premium finishes throughout. Ideal for coastal cruising and island hopping.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>85 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-bed"></i>
+                            <span>2 Cabins</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>25 knots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cargo Ship 1 -->
+            <div class="ship-card" data-category="cargo">
+                <div class="ship-image">
+                    <img src="assets/cargo-1.jpg" alt="Global Freighter 5000">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Global Freighter 5000</h3>
+                    <div class="ship-price">$28,000,000</div>
+                    <p class="ship-description">A robust cargo vessel designed for transatlantic shipping with efficient fuel consumption and reliable performance in challenging conditions.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>450 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span>5000 tons</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>18 knots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cargo Ship 2 -->
+            <div class="ship-card" data-category="cargo">
+                <div class="ship-image">
+                    <img src="assets/cargo-2.jpg" alt="Coastal Carrier 2500">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Coastal Carrier 2500</h3>
+                    <div class="ship-price">$12,500,000</div>
+                    <p class="ship-description">A mid-size cargo vessel perfect for regional transport operations with flexible cargo configurations and efficient loading systems.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>280 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span>2500 tons</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>22 knots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Luxury Liner 1 -->
+            <div class="ship-card" data-category="liner">
+                <div class="ship-image">
+                    <img src="assets/liner-1.jpg" alt="Ocean Paradise 300">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Ocean Paradise 300</h3>
+                    <div class="ship-price">$75,000,000</div>
+                    <p class="ship-description">A luxury passenger liner featuring premium suites, gourmet restaurants, entertainment venues, and spa facilities for an unparalleled cruise experience.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>300 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-users"></i>
+                            <span>120 Guests</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>2 Pools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Luxury Liner 2 -->
+            <div class="ship-card" data-category="liner">
+                <div class="ship-image">
+                    <img src="assets/liner-2.jpg" alt="Royal Odyssey 500">
+                </div>
+                <div class="ship-info">
+                    <h3 class="ship-name">Royal Odyssey 500</h3>
+                    <div class="ship-price">$120,000,000</div>
+                    <p class="ship-description">A flagship luxury liner with opulent suites, multiple dining options, entertainment facilities, and cutting-edge stabilization systems for comfort.</p>
+                    <div class="ship-details">
+                        <div class="ship-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>500 ft</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-users"></i>
+                            <span>250 Guests</span>
+                        </div>
+                        <div class="ship-detail">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>3 Pools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container" style="margin-top: 50px; margin-bottom: 80px;">
+        <div style="text-align: center;">
+            <h2>Interested in Our Ships?</h2>
+            <p style="margin-bottom: 30px;">Contact our expert consultants for more information or to schedule a viewing</p>
+            <a href="subscribe.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About ShipDecKK</h3>
+                    <p>Leading ship dealership specializing in high-end yachts, cargo ships, and luxury liners since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Ship Gallery</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="subscribe.html">Subscribe</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Ship Sales</a></li>
+                        <li><a href="services.html">Maintenance</a></li>
+                        <li><a href="services.html">Financing</a></li>
+                        <li><a href="services.html">Insurance</a></li>
+                        <li><a href="services.html">Custom Build</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Harbor Drive, Marina Bay</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@shipdeck.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShipDecKK. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const shipCards = document.querySelectorAll('.ship-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter ships
+                    shipCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
