@@ -595,6 +595,19 @@ footer {
     .hero h2 {
         font-size: 2rem;
     }
+
+    .subscription-container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .subscription-container > div:first-child {
+        order: 2;
+    }
+    
+    .subscription-container > div:last-child {
+        order: 1;
+    }
 }
 
 @media screen and (max-width: 480px) {
