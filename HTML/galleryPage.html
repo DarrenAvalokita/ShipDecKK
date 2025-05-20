@@ -4,128 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ship Gallery - ShipDecKK</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/galleryPage.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Additional Gallery Page Styles */
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            background-color: var(--light-gray);
-            border: none;
-            padding: 8px 20px;
-            margin: 5px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--navy);
-            color: var(--white);
-        }
-        
-        .gallery-detail {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .ship-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .ship-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .ship-image {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .ship-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .ship-card:hover .ship-image img {
-            transform: scale(1.05);
-        }
-        
-        .ship-info {
-            padding: 20px;
-        }
-        
-        .ship-name {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--navy);
-        }
-        
-        .ship-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-        
-        .ship-description {
-            margin-bottom: 20px;
-            color: var(--dark-gray);
-        }
-        
-        .ship-details {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid var(--light-gray);
-            padding-top: 15px;
-        }
-        
-        .ship-detail {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .ship-detail i {
-            color: var(--navy);
-            margin-bottom: 5px;
-        }
-        
-        @media screen and (max-width: 768px) {
-            .gallery-detail {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .gallery-detail {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="ShipDecKK Logo">
+                <img src="../Assets/logo.png" alt="ShipDecKK Logo">
                 <h1>ShipDecKK</h1>
             </div>
             <button class="mobile-menu-btn">
@@ -133,18 +22,18 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="../HTML/homePage.html" class="active">Home</a></li>
+                    <li><a href="../HTML/homePage.html">Home</a></li>
                     <li><a href="../HTML/galleryPage.html">Gallery</a></li>
                     <li><a href="../HTML/servicesPage.html">Services</a></li>
                     <li><a href="../HTML/aboutUsPage.html">About Us</a></li>
-                    <li><a href="../HTML/">Subscribe</a></li>
+                    <li><a href="../HTML/subscriptionPage.html">Subscribe</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Page Title -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/gallery-hero.jpg');">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/heroBG.jpg');">
         <div class="hero-content">
             <h2>Our Ship Collection</h2>
             <p>Explore our diverse range of high-quality vessels available for purchase</p>
@@ -160,7 +49,7 @@
         
         <div class="gallery-filters">
             <button class="filter-btn active" data-filter="all">All Ships</button>
-            <button class="filter-btn" data-filter="yacht">Luxury Yachts</button>
+            <button class="filter-btn" data-filter="yacht">High-End Yachts</button>
             <button class="filter-btn" data-filter="cargo">Cargo Ships</button>
             <button class="filter-btn" data-filter="liner">Luxury Liners</button>
         </div>
@@ -169,7 +58,7 @@
             <!-- Yacht 1 -->
             <div class="ship-card" data-category="yacht">
                 <div class="ship-image">
-                    <img src="assets/yacht-1.jpg" alt="Ocean Voyager 120">
+                    <img src="../Assets/oceanVoyager.jpg" alt="Ocean Voyager 120">
                 </div>
                 <div class="ship-info">
                     <h3 class="ship-name">Ocean Voyager 120</h3>
@@ -195,7 +84,7 @@
             <!-- Yacht 2 -->
             <div class="ship-card" data-category="yacht">
                 <div class="ship-image">
-                    <img src="assets/yacht-2.jpg" alt="Coastal Explorer 85">
+                    <img src="../Assets/coastalExplorer.webp" alt="Coastal Explorer 85">
                 </div>
                 <div class="ship-info">
                     <h3 class="ship-name">Coastal Explorer 85</h3>
@@ -329,7 +218,7 @@
         <div style="text-align: center;">
             <h2>Interested in Our Ships?</h2>
             <p style="margin-bottom: 30px;">Contact our expert consultants for more information or to schedule a viewing</p>
-            <a href="subscribe.html" class="btn">Contact Us</a>
+            <a href="../HTML/subscriptionPage.html" class="btn">Contact Us</a>
         </div>
     </section>
 
@@ -351,22 +240,22 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Ship Gallery</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="subscribe.html">Subscribe</a></li>
+                        <li><a href="../HTML/homePage.html">Home</a></li>
+                        <li><a href="../HTML/galleryPage.html">Ship Gallery</a></li>
+                        <li><a href="../HTML/servicesPage.html">Our Services</a></li>
+                        <li><a href="../HTML/aboutUsPage.html">About Us</a></li>
+                        <li><a href="../HTML/subscriptionPage.html">Subscribe</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="services.html">Ship Sales</a></li>
-                        <li><a href="services.html">Maintenance</a></li>
-                        <li><a href="services.html">Financing</a></li>
-                        <li><a href="services.html">Insurance</a></li>
-                        <li><a href="services.html">Custom Build</a></li>
+                        <li><a href="../HTML/servicesPage.html">Ship Sales</a></li>
+                        <li><a href="../HTML/servicesPage.html">Maintenance</a></li>
+                        <li><a href="../HTML/servicesPage.html">Financing</a></li>
+                        <li><a href="../HTML/servicesPage.html">Insurance</a></li>
+                        <li><a href="../HTML/servicesPage.html">Custom Build</a></li>
                     </ul>
                 </div>
                 
@@ -385,35 +274,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Gallery filtering functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const shipCards = document.querySelectorAll('.ship-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Filter ships
-                    shipCards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/gallery.js"></script>
 </body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - ShipDecKK</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/aboutUsPage.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,7 +14,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="ShipDecKK Logo">
+                <img src="../Assets/logo.png" alt="ShipDecKK Logo">
                 <h1>ShipDecKK</h1>
             </div>
             <button class="mobile-menu-btn">
@@ -21,18 +22,18 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="../HTML/homePage.html" class="active">Home</a></li>
+                    <li><a href="../HTML/homePage.html">Home</a></li>
                     <li><a href="../HTML/galleryPage.html">Gallery</a></li>
                     <li><a href="../HTML/servicesPage.html">Services</a></li>
                     <li><a href="../HTML/aboutUsPage.html">About Us</a></li>
-                    <li><a href="../HTML/">Subscribe</a></li>
+                    <li><a href="../HTML/subscriptionPage.html">Subscribe</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Page Hero -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/about-hero.jpg');">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/heroBG.jpg');">
         <div class="hero-content">
             <h2>About ShipDecKK</h2>
             <p>Excellence in maritime dealership since 2020</p>
@@ -41,7 +42,7 @@
 
     <!-- Company Story -->
     <section class="container">
-        <div class="about-container fade-in">
+        <div class="about-container">
             <div class="about-content">
                 <h2>Our Story</h2>
                 <p>Founded in 2020, ShipDecKK emerged from a passionate vision to revolutionize the maritime industry. What started as a small team of maritime enthusiasts has grown into a leading ship dealership, specializing in high-end yachts, cargo ships, and luxury liners.</p>
@@ -51,7 +52,7 @@
                 <p>Today, ShipDecKK stands as a trusted name in the maritime industry, known for our carefully curated selection of vessels and our dedication to helping clients find their perfect ship. Our reputation has been built on the foundation of quality, reliability, and the highest standards of customer care.</p>
             </div>
             <div class="about-image">
-                <img src="assets/about-company.jpg" alt="ShipDecKK Company">
+                <img src="../Assets/team.avif" alt="ShipDecKK Company">
             </div>
         </div>
     </section>
@@ -64,7 +65,7 @@
                 <p>Guided by principles that drive our success and define our character</p>
             </div>
             
-            <div class="mission-values fade-in">
+            <div class="mission-values">
                 <div class="mission-statement">
                     <h3>Our Mission</h3>
                     <p>To provide exceptional maritime vessels and services that exceed our clients' expectations while setting new standards for quality, innovation, and customer satisfaction in the ship dealership industry.</p>
@@ -122,13 +123,13 @@
             <p>Meet the professionals who make ShipDecKK a leader in maritime excellence</p>
         </div>
         
-        <div class="team-grid fade-in">
+        <div class="team-grid">
             <div class="team-member">
                 <div class="member-image">
-                    <img src="assets/team-ceo.jpg" alt="CEO">
+                    <img src="../Assets/ceo.jpg" alt="CEO">
                 </div>
                 <div class="member-info">
-                    <h3>Captain James Morrison</h3>
+                    <h3>Captain Brandon</h3>
                     <p class="member-role">Chief Executive Officer</p>
                     <p>With over 30 years of maritime experience, Captain Morrison leads ShipDecKK with vision and expertise. His extensive background in naval operations and ship management guides our strategic direction.</p>
                 </div>
@@ -136,7 +137,7 @@
             
             <div class="team-member">
                 <div class="member-image">
-                    <img src="assets/team-cto.jpg" alt="CTO">
+                    <img src="../Assets/cto.jpg" alt="CTO">
                 </div>
                 <div class="member-info">
                     <h3>Sarah Chen</h3>
@@ -147,7 +148,7 @@
             
             <div class="team-member">
                 <div class="member-image">
-                    <img src="assets/team-sales.jpg" alt="Sales Director">
+                    <img src="../Assets/sales.jpg" alt="Sales Director">
                 </div>
                 <div class="member-info">
                     <h3>Michael Rodriguez</h3>
@@ -166,7 +167,7 @@
                 <p>Milestones that reflect our commitment to excellence and growth</p>
             </div>
             
-            <div class="achievements fade-in">
+            <div class="achievements">
                 <div class="achievement-grid">
                     <div class="achievement-item">
                         <div class="number">500+</div>
@@ -217,9 +218,9 @@
             <p>Experience the ShipDecKK difference and let us help you find your perfect vessel</p>
         </div>
         
-        <div class="cta-buttons" style="text-align: center; margin-top: 30px;">
-            <a href="gallery.html" class="btn">Explore Our Fleet</a>
-            <a href="subscribe.html" class="btn" style="margin-left: 20px; background-color: var(--navy);">Get In Touch</a>
+        <div class="cta-btn" style="text-align: center; margin-top: 30px;">
+            <a href="gallery.html" class="btn" id="eof-btn">Explore Our Fleet</a>
+            <a href="subscribe.html" class="btn" id="git-btn">Get In Touch</a>
         </div>
     </section>
 
@@ -241,22 +242,22 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Ship Gallery</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="subscribe.html">Subscribe</a></li>
+                        <li><a href="../HTML/homePage.html">Home</a></li>
+                        <li><a href="../HTML/galleryPage.html">Ship Gallery</a></li>
+                        <li><a href="../HTML/servicesPage.html">Our Services</a></li>
+                        <li><a href="../HTML/aboutUsPage.html">About Us</a></li>
+                        <li><a href="../HTML/subscriptionPage.html">Subscribe</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="services.html">Ship Sales</a></li>
-                        <li><a href="services.html">Maintenance</a></li>
-                        <li><a href="services.html">Financing</a></li>
-                        <li><a href="services.html">Insurance</a></li>
-                        <li><a href="services.html">Custom Build</a></li>
+                        <li><a href="../HTML/servicesPage.html">Ship Sales</a></li>
+                        <li><a href="../HTML/servicesPage.html">Maintenance</a></li>
+                        <li><a href="../HTML/servicesPage.html">Financing</a></li>
+                        <li><a href="../HTML/servicesPage.html">Insurance</a></li>
+                        <li><a href="../HTML/servicesPage.html">Custom Build</a></li>
                     </ul>
                 </div>
                 
@@ -275,6 +276,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="../JS/script.js"></script>
 </body>
 </html>

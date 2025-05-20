@@ -1,86 +1,82 @@
-// ShipDecKK - Form Validation JavaScript File
+const subscriptionForm = document.getElementById('subscription-form');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const subscriptionForm = document.getElementById('subscription-form');
-    
-    if (subscriptionForm) {
-        subscriptionForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form fields
-            const nameInput = document.getElementById('full-name');
-            const emailInput = document.getElementById('email');
-            const passwordInput = document.getElementById('password');
-            const confirmPasswordInput = document.getElementById('confirm-password');
-            const ageInput = document.getElementById('age');
-            const newsletterCheckbox = document.getElementById('newsletter');
-            
-            // Reset previous error states
-            resetFormErrors();
-            
-            // Perform validations
-            let isValid = true;
-            
-            // Validation 1: Check for empty fields
-            if (!validateNotEmpty(nameInput, "Please enter your full name")) {
+if (subscriptionForm) {
+    subscriptionForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form fields
+        const nameInput = document.getElementById('full-name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const ageInput = document.getElementById('age');
+        const newsletterCheckbox = document.getElementById('newsletter');
+        
+        // Reset previous error states
+        resetFormErrors();
+        
+        // Perform validations
+        let isValid = true;
+        
+        // Validation 1: Check for empty fields
+        if (!validateNotEmpty(nameInput, "Please enter your full name")) {
+            isValid = false;
+        }
+        
+        if (!validateNotEmpty(emailInput, "Please enter your email address")) {
+            isValid = false;
+        } else {
+            // Validation 2: Email format validation
+            if (!validateEmailFormat(emailInput, "Please enter a valid email (e.g., example@domain.com)")) {
                 isValid = false;
             }
-            
-            if (!validateNotEmpty(emailInput, "Please enter your email address")) {
+        }
+        
+        if (!validateNotEmpty(passwordInput, "Please enter a password")) {
+            isValid = false;
+        } else {
+            // Validation 3: Password length
+            if (!validatePasswordLength(passwordInput, "Password must be at least 8 characters long")) {
                 isValid = false;
-            } else {
-                // Validation 2: Email format validation
-                if (!validateEmailFormat(emailInput, "Please enter a valid email (e.g., example@domain.com)")) {
-                    isValid = false;
-                }
             }
-            
-            if (!validateNotEmpty(passwordInput, "Please enter a password")) {
+        }
+        
+        if (!validateNotEmpty(confirmPasswordInput, "Please confirm your password")) {
+            isValid = false;
+        } else {
+            // Validation 4: Password match
+            if (!validatePasswordsMatch(passwordInput, confirmPasswordInput, "Passwords do not match")) {
                 isValid = false;
-            } else {
-                // Validation 3: Password length
-                if (!validatePasswordLength(passwordInput, "Password must be at least 8 characters long")) {
-                    isValid = false;
-                }
             }
-            
-            if (!validateNotEmpty(confirmPasswordInput, "Please confirm your password")) {
+        }
+        
+        if (!validateNotEmpty(ageInput, "Please enter your age")) {
+            isValid = false;
+        } else {
+            // Validation 5: Age range validation
+            if (!validateAgeRange(ageInput, "You must be between 18 and 80 years old", 18, 80)) {
                 isValid = false;
-            } else {
-                // Validation 4: Password match
-                if (!validatePasswordsMatch(passwordInput, confirmPasswordInput, "Passwords do not match")) {
-                    isValid = false;
-                }
             }
+        }
+        
+        // If all validations pass
+        if (isValid) {
+            // Show success message
+            const formContainer = document.querySelector('.form-container');
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <h3>Thank you for subscribing!</h3>
+                <p>Hello ${nameInput.value}, we've sent a confirmation email to ${emailInput.value}.</p>
+                <p>You'll start receiving updates from ShipDecKK shortly.</p>
+            `;
             
-            if (!validateNotEmpty(ageInput, "Please enter your age")) {
-                isValid = false;
-            } else {
-                // Validation 5: Age range validation
-                if (!validateAgeRange(ageInput, "You must be between 18 and 80 years old", 18, 80)) {
-                    isValid = false;
-                }
-            }
-            
-            // If all validations pass
-            if (isValid) {
-                // Show success message
-                const formContainer = document.querySelector('.form-container');
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.innerHTML = `
-                    <h3>Thank you for subscribing!</h3>
-                    <p>Hello ${nameInput.value}, we've sent a confirmation email to ${emailInput.value}.</p>
-                    <p>You'll start receiving updates from ShipDecKK shortly.</p>
-                `;
-                
-                // Replace form with success message
-                formContainer.innerHTML = '';
-                formContainer.appendChild(successMessage);
-            }
-        });
-    }
-});
+            // Replace form with success message
+            formContainer.innerHTML = '';
+            formContainer.appendChild(successMessage);
+        }
+    });
+}
 
 // Validation Functions
 

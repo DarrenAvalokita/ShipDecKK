@@ -1,0 +1,200 @@
+    /* Subscription Form Styles FROM FIRST ITERATION*/
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--very-dark-gray);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--navy);
+}
+
+.error-message {
+    color: #ff3860;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group.error .form-control {
+    border-color: #ff3860;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.form-group.success .form-control {
+    border-color: #23d160;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--gold);
+}
+
+/* Subscription Page Specific Styles FROM SECOND ITERATION*/
+
+/* Subscription Container */
+.subscription-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: var(--very-dark-gray);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.benefits-title {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.benefit-item.last {
+    margin-bottom: 0;
+}
+
+.benefit-icon {
+    background-color: var(--gold);
+    color: var(--black);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.benefit-content h4 {
+    color: var(--white);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.benefit-content p {
+    color: var(--light-gray);
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.benefit-content .highlight {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Form Styling */
+.form-title {
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.checkbox-group {
+    margin: 25px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--very-dark-gray);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive adjustments for subscription page */
+@media screen and (max-width: 768px) {
+    .subscription-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .subscription-container .benefits-section {
+        order: 2;
+    }
+    
+    .subscription-container .form-container {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subscription-container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .subscription-container > div:first-child {
+        order: 2;
+    }
+    
+    .subscription-container > div:last-child {
+        order: 1;
+    }
+}
