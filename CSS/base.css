@@ -210,8 +210,8 @@ section {
 
 /* Feature Grid */
 .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    width: 100%;
     gap: 30px;
 }
 
@@ -221,6 +221,7 @@ section {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 .feature-card:hover {
@@ -277,8 +278,6 @@ footer {
 }
 
 .footer-container {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
     display: flex;
     gap: 30px;
     width: 100%;
@@ -393,15 +392,18 @@ footer {
     .feature-grid, 
     .gallery-grid,
     .services-container {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        flex-direction: column;
     }
     
     .about-container {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        flex-direction: column;
     }
     
     .achievement-grid {
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr); */
+        flex-direction: column;
     }
     
     .footer-container {
