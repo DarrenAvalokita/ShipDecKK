@@ -3,7 +3,8 @@
 }
 
 .about-achievement-section {
-    background-color: var(--white);
+    background-color: var(--dark-gray);
+    padding: 0;
 }
 
 .about-container {
@@ -17,6 +18,10 @@
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    width: 90%;
 }
 
 .about-content h2 {
@@ -52,7 +57,7 @@
     margin-top: 50px;
 }
 
-.achievement-grid {
+.achievement-bar {
     display: flex;
     width: 100%;
     gap: 20px;

@@ -1,11 +1,24 @@
     /* Services Styles */
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 40px;
 }
 
+.icons-services {
+    height: 32px;
+}
+
+.service-list {
+    margin-top: 15px; 
+    padding-left: 20px;
+}
+
 .service-card {
+    flex: 1 1 calc(50% - 40px);
     display: flex;
     background-color: var(--white);
     border-radius: 8px;

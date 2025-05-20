@@ -29,6 +29,18 @@ body {
     background-color: var(--very-light-gray);
 }
 
+.icons {
+    height: 25px;
+}
+
+.icons-footer {
+    height: 18px;
+}
+
+.icons-footer2 {
+    height: 16px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', serif;
     font-weight: 700;
@@ -249,23 +261,22 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 30px;
-    gap: 40px;
+    gap: 20px;
 }
 
-#eof-btn {
+#left-btn {
     background-color: var(--navy);
     color: var(--white);
 }
 
-#git-btn {
+#right-btn {
     margin: 0 20px;
     background-color: var(--white);
     color: var(--navy);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-#git-btn:hover {
+#right-btn:hover {
     background-color: var(--gold);
     color: var(--black);
 }
@@ -407,7 +418,8 @@ footer {
     }
     
     .footer-container {
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
+        flex-direction: column;
     }
     
     .hero h2 {
@@ -418,7 +430,7 @@ footer {
 @media screen and (max-width: 480px) {
     .achievement-grid,
     .footer-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
     
     .service-card {
@@ -431,9 +443,5 @@ footer {
     
     .form-container {
         padding: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
     }
 }
