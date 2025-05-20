@@ -1,5 +1,4 @@
 const form = document.getElementById("subscription-form");
-// const outputDiv = document.getElementById("output");
 const formContainer = document.querySelector('.form-container');
 const successMessage = document.createElement('div');
 
@@ -56,23 +55,12 @@ form.addEventListener("submit", function(event){
         return;
     }
 
-    // formContainer.innerHTML = ''
-    // successMessage.className = 'success-message'
-    // successMessage.innerHTML = `
-    //     <h3>Thank you for subscribing!</h3>
-    //     <p>Hello ${name}, we've sent a confirmation email to ${email}.</p>
-    //     <p>You'll start receiving updates from ShipDecKK shortly.</p>
-    // `;
-    // // form.style.display = 'none';
-    // formContainer.innerHTML = '';
-    // formContainer.appendChild(successMessage);
+    successMessage.className = 'success-message'
+    successMessage.innerHTML = `
+        <h3>Thank you for subscribing!</h3>
+        <p>Hello ${name}, we've sent a confirmation email to ${email}.</p>
+        <p>You'll start receiving updates from ShipDecKK shortly.</p>
+    `;
+    formContainer.innerHTML = '';
+    formContainer.appendChild(successMessage);
 });
-
-    /* <h3>Submitted Data:</h3>
-        <p><strong>Name: ${name}</strong></p>
-        <p><strong>Email: ${email}</strong></p>
-        <p><strong>Age: ${age}</strong></p>
-        <p><strong>Gender: ${gender}</strong></p>
-        <p><strong>Course: ${course}</strong></p>
-        <p><strong>Bio: ${bio}</strong></p>
-        <p><strong>Terms Accepted: ${termsChecked}</strong></p> */}
