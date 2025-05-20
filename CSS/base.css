@@ -247,6 +247,8 @@ section {
 .cta-btn {
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin-top: 30px;
     gap: 40px;
 }
 
