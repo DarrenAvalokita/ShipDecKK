@@ -1,13 +1,15 @@
-    /* Subscription Form Styles FROM FIRST ITERATION*/
 .form-container {
     width: 100%;
-    /* max-width: 600px; */
     height: 100%;
     margin: 0 auto;
     background-color: var(--white);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icons-subscription {
+    height: 24px;
 }
 
 .form-group {
@@ -71,12 +73,7 @@
     background-color: var(--gold);
 }
 
-/* Subscription Page Specific Styles FROM SECOND ITERATION*/
-
-/* Subscription Container */
 .subscription-container {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     display: flex;
     width: 100%;
     height: 100%;
@@ -84,7 +81,6 @@
     align-items: start;
 }
 
-/* Benefits Section */
 .benefits-section {
     background-color: var(--very-dark-gray);
     color: var(--white);
@@ -144,7 +140,6 @@
     font-weight: 600;
 }
 
-/* Form Styling */
 .form-title {
     text-align: center;
     color: var(--navy);
@@ -175,35 +170,9 @@
     gap: 10px;
 }
 
-/* Responsive adjustments for subscription page */
 @media screen and (max-width: 768px) {
     .subscription-container {
-        /* grid-template-columns: 1fr; */
         flex-direction: column;
         gap: 40px;
     }
-    
-    /* .subscription-container .benefits-section {
-        order: 2;
-    }
-    
-    .subscription-container .form-container {
-        order: 1;
-    } */
-}
-
-@media screen and (max-width: 768px) {
-    .subscription-container {
-        /* grid-template-columns: 1fr !important; */
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    /* .subscription-container > div:first-child {
-        order: 2;
-    }
-    
-    .subscription-container > div:last-child {
-        order: 1;
-    } */
 }

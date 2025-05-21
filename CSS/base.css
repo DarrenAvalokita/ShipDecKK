@@ -1,14 +1,12 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Color Variables */
 :root {
     --white: #FFFFFF;
     --very-light-gray: #f8f7f7;
@@ -21,7 +19,6 @@
     --gold: #f2be00;
 }
 
-/* Base Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -64,16 +61,13 @@ a:hover {
 
 .container {
     max-width: 1200px;
-    /* max-width: 100%; */
     margin: 0 auto;
-    padding: 2rem 1.25rem; /*0 1.25 rem*/
+    padding: 2rem 1.25rem;
 }
 
-/* Header Styles */
 header {
     background-color: var(--very-dark-gray);
     color: var(--white);
-    /* padding: 0px 0; */
     position: relative;
 
 }
@@ -83,9 +77,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    /* width: 100%; */
-    /* padding-left: 10px;
-    padding-right: 10px; */
 }
 
 .logo {
@@ -95,7 +86,6 @@ header {
 
 .logo img {
     height: 100px;
-    /* margin-right: 10px; */
 }
 
 .logo h1 {
@@ -104,7 +94,6 @@ header {
     margin-bottom: 0;
 }
 
-/* Navigation */
 nav ul {
     display: flex;
     list-style: none;
@@ -137,7 +126,6 @@ nav ul li a:hover {
     justify-content: flex-end;
 }
 
-/* Hero Section */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/heroBG.jpg');
     background-size: cover;
@@ -150,8 +138,6 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    /* max-width: 800px;
-    margin: 0 auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +146,6 @@ nav ul li a:hover {
 
 .hero h2 {
     font-size: 3rem;
-    /* margin-bottom: 20px; */
     color: var(--white);
 }
 
@@ -204,24 +189,12 @@ section {
     display: inline-block;
 }
 
-/* .section-header h2:after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--gold);
-} */
-
 .about-section {
     background-color: var(--light-gray);
     padding: 20px;
 }
 
-/* Feature Grid */
-.feature-grid {
+.feature-bar {
     display: flex;
     width: 100%;
     gap: 30px;
@@ -256,7 +229,6 @@ section {
     margin-bottom: 10px;
 }
 
-/* Call to action */
 .cta-btn {
     display: flex;
     justify-content: center;
@@ -281,11 +253,9 @@ section {
     color: var(--black);
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--very-dark-gray);
     color: var(--white);
-    /*padding: 60px 0 20px;*/
 }
 
 .footer-container {
@@ -304,16 +274,6 @@ footer {
     margin-bottom: 20px;
     position: relative;
 }
-
-/* .footer-section h3:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 50px;
-    height: 2px;
-    background-color: var(--gold);
-} */
 
 .footer-section p {
     font-size: 0.9rem;
@@ -368,7 +328,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
@@ -400,25 +359,20 @@ footer {
         padding: 10px 0;
     }
     
-    .feature-grid, 
-    .gallery-grid,
+    .feature-bar, 
     .services-container {
-        /* grid-template-columns: 1fr; */
         flex-direction: column;
     }
     
     .about-container {
-        /* grid-template-columns: 1fr; */
         flex-direction: column;
     }
     
-    .achievement-grid {
-        /* grid-template-columns: repeat(2, 1fr); */
+    .achievement-bar {
         flex-direction: column;
     }
     
     .footer-container {
-        /* grid-template-columns: 1fr 1fr; */
         flex-direction: column;
     }
     
@@ -428,7 +382,7 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    .achievement-grid,
+    .achievement-bar,
     .footer-container {
         flex-direction: column;
     }
